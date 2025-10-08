@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -88,252 +88,253 @@
 <body>
     <h1>Plant Vs Brainrot stock</h1>
     <div id="next-stock">Next stock: ...</div>
+    <div id="stock-overlay" style="position:fixed;top:20px;right:20px;z-index:9999;min-width:220px;max-width:90vw;background:#222;border:2px solid #ffd700;color:#ffd700;font-weight:bold;border-radius:10px;padding:18px 24px;font-size:1.1em;box-shadow:0 0 16px #000a;display:none"></div>
     <div class="btn-container">
         <button class="seed-btn purple-btn" onclick="showInfo('Water Melon Seed', `<pre style='text-align:left; color:#fff; background:none; border:none; font-size:1em;'>[1] ---------------------------------
 Name: Watermelon Seed
 Stock: 1
-Next Restock Away: 32
-Unix: 1759916700
-Restock At: 2025/10/08 16:45:00
+Next Restock Away: 119
+Unix: 1759964100
+Restock At: 2025/10/09 05:55:00
 [2] ---------------------------------
 Name: Watermelon Seed
 Stock: 1
-Next Restock Away: 190
-Unix: 1759964100
-Restock At: 2025/10/09 05:55:00
+Next Restock Away: 167
+Unix: 1759978500
+Restock At: 2025/10/09 09:55:00
 [3] ---------------------------------
 Name: Watermelon Seed
 Stock: 1
-Next Restock Away: 238
-Unix: 1759978500
-Restock At: 2025/10/09 09:55:00
+Next Restock Away: 193
+Unix: 1759986300
+Restock At: 2025/10/09 12:05:00
 [4] ---------------------------------
 Name: Watermelon Seed
 Stock: 1
-Next Restock Away: 264
-Unix: 1759986300
-Restock At: 2025/10/09 12:05:00
+Next Restock Away: 194
+Unix: 1759986600
+Restock At: 2025/10/09 12:10:00
 [5] ---------------------------------
 Name: Watermelon Seed
 Stock: 1
-Next Restock Away: 265
-Unix: 1759986600
-Restock At: 2025/10/09 12:10:00
+Next Restock Away: 219
+Unix: 1759994100
+Restock At: 2025/10/09 14:15:00
 </pre>`);">Water Melon Seed</button>
         <button class="seed-btn purple-btn" onclick="showInfo('Grape seed', `<pre style='text-align:left; color:#fff; background:none; border:none; font-size:1em;'>[1] ---------------------------------
 Name: Grape Seed
 Stock: 1
-Next Restock Away: 32
-Unix: 1759917000
-Restock At: 2025/10/08 16:50:00
+Next Restock Away: 35
+Unix: 1759938900
+Restock At: 2025/10/08 22:55:00
 [2] ---------------------------------
 Name: Grape Seed
 Stock: 1
-Next Restock Away: 54
-Unix: 1759923600
-Restock At: 2025/10/08 18:40:00
+Next Restock Away: 42
+Unix: 1759941000
+Restock At: 2025/10/08 23:30:00
 [3] ---------------------------------
 Name: Grape Seed
 Stock: 1
-Next Restock Away: 56
-Unix: 1759924200
-Restock At: 2025/10/08 18:50:00
+Next Restock Away: 79
+Unix: 1759952100
+Restock At: 2025/10/09 02:35:00
 [4] ---------------------------------
 Name: Grape Seed
 Stock: 1
-Next Restock Away: 61
-Unix: 1759925700
-Restock At: 2025/10/08 19:15:00
+Next Restock Away: 98
+Unix: 1759957800
+Restock At: 2025/10/09 04:10:00
 [5] ---------------------------------
 Name: Grape Seed
 Stock: 1
-Next Restock Away: 105
-Unix: 1759938900
-Restock At: 2025/10/08 22:55:00
+Next Restock Away: 99
+Unix: 1759958100
+Restock At: 2025/10/09 04:15:00
 </pre>`);">Grape seed</button>
         <button class="seed-btn rainbow-btn" onclick="showInfo('Cocotank seed', `<pre style='text-align:left; color:#fff; background:none; border:none; font-size:1em;'>[1] ---------------------------------
 Name: Cocotank Seed
 Stock: 1
-Next Restock Away: 6
-Unix: 1759909200
-Restock At: 2025/10/08 14:40:00
+Next Restock Away: 29
+Unix: 1759937100
+Restock At: 2025/10/08 22:25:00
 [2] ---------------------------------
 Name: Cocotank Seed
 Stock: 1
-Next Restock Away: 63
-Unix: 1759926300
-Restock At: 2025/10/08 19:25:00
+Next Restock Away: 145
+Unix: 1759971900
+Restock At: 2025/10/09 08:05:00
 [3] ---------------------------------
 Name: Cocotank Seed
 Stock: 1
-Next Restock Away: 99
-Unix: 1759937100
-Restock At: 2025/10/08 22:25:00
+Next Restock Away: 164
+Unix: 1759977600
+Restock At: 2025/10/09 09:40:00
 [4] ---------------------------------
 Name: Cocotank Seed
 Stock: 1
-Next Restock Away: 215
-Unix: 1759971900
-Restock At: 2025/10/09 08:05:00
+Next Restock Away: 173
+Unix: 1759980300
+Restock At: 2025/10/09 10:25:00
 [5] ---------------------------------
 Name: Cocotank Seed
 Stock: 1
-Next Restock Away: 234
-Unix: 1759977600
-Restock At: 2025/10/09 09:40:00
+Next Restock Away: 209
+Unix: 1759991100
+Restock At: 2025/10/09 13:25:00
 </pre>`);">Cocotank seed</button>
         <button class="seed-btn rainbow-btn" onclick="showInfo('Carnivorous seed', `<pre style='text-align:left; color:#fff; background:none; border:none; font-size:1em;'>[1] ---------------------------------
 Name: Carnivorous Plant Seed
 Stock: 1
-Next Restock Away: 65
-Unix: 1759926900
-Restock At: 2025/10/08 19:35:00
+Next Restock Away: 26
+Unix: 1759936200
+Restock At: 2025/10/08 22:10:00
 [2] ---------------------------------
 Name: Carnivorous Plant Seed
 Stock: 1
-Next Restock Away: 96
-Unix: 1759936200
-Restock At: 2025/10/08 22:10:00
+Next Restock Away: 57
+Unix: 1759945500
+Restock At: 2025/10/09 00:45:00
 [3] ---------------------------------
 Name: Carnivorous Plant Seed
 Stock: 1
-Next Restock Away: 127
-Unix: 1759945500
-Restock At: 2025/10/09 00:45:00
+Next Restock Away: 88
+Unix: 1759954800
+Restock At: 2025/10/09 03:20:00
 [4] ---------------------------------
 Name: Carnivorous Plant Seed
 Stock: 1
-Next Restock Away: 158
-Unix: 1759954800
-Restock At: 2025/10/09 03:20:00
+Next Restock Away: 119
+Unix: 1759964100
+Restock At: 2025/10/09 05:55:00
 [5] ---------------------------------
 Name: Carnivorous Plant Seed
 Stock: 1
-Next Restock Away: 189
-Unix: 1759964100
-Restock At: 2025/10/09 05:55:00
+Next Restock Away: 249
+Unix: 1760003100
+Restock At: 2025/10/09 16:45:00
 </pre>`);">Carnivorous seed</button>
         <button class="seed-btn bw-btn" onclick="showInfo('Mr.Carrot', `<pre style='text-align:left; color:#fff; background:none; border:none; font-size:1em;'>[1] ---------------------------------
 Name: Mr Carrot Seed
 Stock: 1
-Next Restock Away: 4
-Unix: 1759908600
-Restock At: 2025/10/08 14:30:00
+Next Restock Away: 112
+Unix: 1759962000
+Restock At: 2025/10/09 05:20:00
 [2] ---------------------------------
 Name: Mr Carrot Seed
 Stock: 1
-Next Restock Away: 69
-Unix: 1759928100
-Restock At: 2025/10/08 19:55:00
+Next Restock Away: 156
+Unix: 1759975200
+Restock At: 2025/10/09 09:00:00
 [3] ---------------------------------
 Name: Mr Carrot Seed
 Stock: 1
-Next Restock Away: 182
-Unix: 1759962000
-Restock At: 2025/10/09 05:20:00
+Next Restock Away: 232
+Unix: 1759998000
+Restock At: 2025/10/09 15:20:00
 [4] ---------------------------------
 Name: Mr Carrot Seed
 Stock: 1
-Next Restock Away: 226
-Unix: 1759975200
-Restock At: 2025/10/09 09:00:00
+Next Restock Away: 242
+Unix: 1760001000
+Restock At: 2025/10/09 16:10:00
 [5] ---------------------------------
 Name: Mr Carrot Seed
 Stock: 1
-Next Restock Away: 302
-Unix: 1759998000
-Restock At: 2025/10/09 15:20:00
+Next Restock Away: 248
+Unix: 1760002800
+Restock At: 2025/10/09 16:40:00
 </pre>`);">Mr.Carrot</button>
         <button class="seed-btn bw-btn" onclick="showInfo('Tomatrio seed', `<pre style='text-align:left; color:#fff; background:none; border:none; font-size:1em;'>[1] ---------------------------------
 Name: Tomatrio Seed
 Stock: 1
-Next Restock Away: 369
+Next Restock Away: 300
 Unix: 1760018400
 Restock At: 2025/10/09 21:00:00
 [2] ---------------------------------
 Name: Tomatrio Seed
 Stock: 1
-Next Restock Away: 513
+Next Restock Away: 444
 Unix: 1760061600
 Restock At: 2025/10/10 09:00:00
 [3] ---------------------------------
 Name: Tomatrio Seed
 Stock: 1
-Next Restock Away: 753
+Next Restock Away: 684
 Unix: 1760133600
 Restock At: 2025/10/11 05:00:00
 [4] ---------------------------------
 Name: Tomatrio Seed
 Stock: 1
-Next Restock Away: 766
+Next Restock Away: 697
 Unix: 1760137500
 Restock At: 2025/10/11 06:05:00
 [5] ---------------------------------
 Name: Tomatrio Seed
 Stock: 1
-Next Restock Away: 812
+Next Restock Away: 743
 Unix: 1760151300
 Restock At: 2025/10/11 09:55:00
 </pre>`);">Tomatrio seed</button>
         <button class="seed-btn bw-btn" onclick="showInfo('Shroombino Seed', `<pre style='text-align:left; color:#fff; background:none; border:none; font-size:1em;'>[1] ---------------------------------
 Name: Shroombino Seed
 Stock: 1
-Next Restock Away: 340
+Next Restock Away: 271
 Unix: 1760009700
 Restock At: 2025/10/09 18:35:00
 [2] ---------------------------------
 Name: Shroombino Seed
 Stock: 1
-Next Restock Away: 510
+Next Restock Away: 441
 Unix: 1760060700
 Restock At: 2025/10/10 08:45:00
 [3] ---------------------------------
 Name: Shroombino Seed
 Stock: 1
-Next Restock Away: 657
+Next Restock Away: 588
 Unix: 1760104800
 Restock At: 2025/10/10 21:00:00
 [4] ---------------------------------
 Name: Shroombino Seed
 Stock: 1
-Next Restock Away: 983
+Next Restock Away: 914
 Unix: 1760202600
 Restock At: 2025/10/12 00:10:00
 [5] ---------------------------------
 Name: Shroombino Seed
 Stock: 1
-Next Restock Away: 1144
+Next Restock Away: 1075
 Unix: 1760250900
 Restock At: 2025/10/12 13:35:00
 </pre>`);">Shroombino Seed</button>
         <button class="seed-btn bw-btn" onclick="showInfo('Mango seed', `<pre style='text-align:left; color:#fff; background:none; border:none; font-size:1em;'>[1] ---------------------------------
 Name: Mango Seed
 Stock: 1
-Next Restock Away: 118
+Next Restock Away: 49
 Unix: 1759943100
 Restock At: 2025/10/09 00:05:00
 [2] ---------------------------------
 Name: Mango Seed
 Stock: 1
-Next Restock Away: 1015
+Next Restock Away: 946
 Unix: 1760212200
 Restock At: 2025/10/12 02:50:00
 [3] ---------------------------------
 Name: Mango Seed
 Stock: 1
-Next Restock Away: 1124
+Next Restock Away: 1055
 Unix: 1760244900
 Restock At: 2025/10/12 11:55:00
 [4] ---------------------------------
 Name: Mango Seed
 Stock: 1
-Next Restock Away: 1403
+Next Restock Away: 1334
 Unix: 1760328600
 Restock At: 2025/10/13 11:10:00
 [5] ---------------------------------
 Name: Mango Seed
 Stock: 1
-Next Restock Away: 1884
+Next Restock Away: 1815
 Unix: 1760472900
 Restock At: 2025/10/15 03:15:00
 </pre>`);">Mango seed</button>
@@ -385,11 +386,22 @@ Restock At: 2025/10/15 03:15:00
                 if (idx === soonestIndex) {
                     html += `<div style="background:#ffd70022;color:#ffd700;font-weight:bold;border-radius:6px;padding:4px 0;">(${seed.name}) ${timeStr}</div>`;
                 } else {
-                    html += `<div>(${seed.name}) ${timeStr}</div>`;
+                    html += `<div style="color:#fff;">(${seed.name}) ${timeStr}</div>`;
                 }
             }
         });
-        document.getElementById('next-stock').innerHTML = html || "No upcoming restock";
+
+        // Hiện overlay trên màn hình
+        const overlay = document.getElementById('stock-overlay');
+        if (html) {
+            overlay.innerHTML = html;
+            overlay.style.display = '';
+        } else {
+            overlay.innerHTML = "No upcoming restock";
+            overlay.style.display = '';
+        }
+        // Ẩn dòng cũ ở dưới nếu muốn
+        document.getElementById('next-stock').style.display = 'none';
     }
 
     updateAllStocks();
@@ -400,6 +412,6 @@ Restock At: 2025/10/15 03:15:00
         box.innerHTML = `<strong>${title}</strong><br>${info}`;
         box.style.display = 'block';
     }
-</script>
+    </script>
 </body>
 </html>
