@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,6 +16,12 @@
             margin-top: 30px;
             font-size: 2em;
             letter-spacing: 1px;
+        }
+        #next-stock {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #ffd700;
+            font-weight: bold;
         }
         .btn-container {
             margin-top: 40px;
@@ -81,6 +87,7 @@
 </head>
 <body>
     <h1>Plant Vs Brainrot stock</h1>
+    <div id="next-stock">Next stock: ...</div>
     <div class="btn-container">
         <button class="seed-btn purple-btn" onclick="showInfo('Water Melon Seed', `<pre style='text-align:left; color:#fff; background:none; border:none; font-size:1em;'>[1] ---------------------------------
 Name: Watermelon Seed
@@ -333,11 +340,66 @@ Restock At: 2025/10/15 03:15:00
     </div>
     <div id="info-box"></div>
     <script>
-        function showInfo(title, info) {
-            const box = document.getElementById('info-box');
-            box.innerHTML = `<strong>${title}</strong><br>${info}`;
-            box.style.display = 'block';
-        }
-    </script>
+    const seeds = [
+        { name: "Watermelon Seed", unix: [1759916700, 1759964100, 1759978500, 1759986300, 1759986600] },
+        { name: "Grape Seed", unix: [1759917000, 1759923600, 1759924200, 1759925700, 1759938900] },
+        { name: "Cocotank Seed", unix: [1759909200, 1759926300, 1759937100, 1759971900, 1759977600] },
+        { name: "Carnivorous Plant Seed", unix: [1759926900, 1759936200, 1759945500, 1759954800, 1759964100] },
+        { name: "Mr Carrot Seed", unix: [1759908600, 1759928100, 1759962000, 1759975200, 1759998000] },
+        { name: "Tomatrio Seed", unix: [1760018400, 1760061600, 1760133600, 1760137500, 1760151300] },
+        { name: "Shroombino Seed", unix: [1760009700, 1760060700, 1760104800, 1760202600, 1760250900] },
+        { name: "Mango Seed", unix: [1759943100, 1760212200, 1760244900, 1760328600, 1760472900] }
+    ];
+
+    function updateAllStocks() {
+        const now = Math.floor(Date.now() / 1000);
+        let soonest = null;
+        let soonestTime = Infinity;
+        let soonestIndex = -1;
+        // Tìm seed sắp stock nhất
+        seeds.forEach((seed, idx) => {
+            const nextUnix = seed.unix.find(u => u > now);
+            if (nextUnix) {
+                const diff = nextUnix - now;
+                if (diff < soonestTime) {
+                    soonestTime = diff;
+                    soonest = { name: seed.name, diff };
+                    soonestIndex = idx;
+                }
+            }
+        });
+
+        let html = '';
+        seeds.forEach((seed, idx) => {
+            const nextUnix = seed.unix.find(u => u > now);
+            if (nextUnix) {
+                const diff = nextUnix - now;
+                const hours = Math.floor(diff / 3600);
+                const minutes = Math.floor((diff % 3600) / 60);
+                const seconds = diff % 60;
+                let timeStr = '';
+                if (hours > 0) timeStr += hours + 'h ';
+                if (minutes > 0 || hours > 0) timeStr += minutes + 'm ';
+                timeStr += seconds + 's';
+                // Nếu là seed chuẩn bị stock nhất thì làm sáng màu
+                if (idx === soonestIndex) {
+                    html += `<div style="background:#ffd70022;color:#ffd700;font-weight:bold;border-radius:6px;padding:4px 0;">(${seed.name}) ${timeStr}</div>`;
+                } else {
+                    html += `<div>(${seed.name}) ${timeStr}</div>`;
+                }
+            }
+        });
+        document.getElementById('next-stock').innerHTML = html || "No upcoming restock";
+    }
+
+    updateAllStocks();
+    setInterval(updateAllStocks, 1000);
+
+    function showInfo(title, info) {
+        const box = document.getElementById('info-box');
+        box.innerHTML = `<strong>${title}</strong><br>${info}`;
+        box.style.display = 'block';
+    }
+</script>
 </body>
 </html>
